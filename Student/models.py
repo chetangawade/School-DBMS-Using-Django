@@ -1,0 +1,453 @@
+from django.db import models
+
+# Create your models here.
+
+# Nrs standard
+
+class Nrs(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17)
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+# Lkg standard
+class Lkg(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+# Ukg standard
+class Ukg(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+class First(models.Model) : 
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+# 2nd standard
+class Second(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+    
+# 3rd standard
+class Third(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+# 4th standard
+class Fourth(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+# 5th standard
+class Fifth(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+# 6th standard
+class Sixth(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+# 7th standard
+class Seventh(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+# 8th standard
+class Eight(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+#  9th standard
+class Nineth(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+# 10th standard
+class Tenth(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+# 11th standard
+class Eleventh(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()
+
+# 12th standard
+class Twelth(models.Model) :
+    # student details
+    name = models.CharField(max_length=50)
+    father_name = models.CharField(max_length=50)
+    mother_name = models.CharField(max_length=50)
+    birth_date = models.CharField(max_length=17)
+    birth_place = models.CharField(max_length=50)
+    std = models.CharField(max_length=17)
+    register_no = models.CharField(max_length=27)
+    master_no = models.CharField(max_length=27)
+    rollno = models.CharField(max_length=17)
+    udise_no = models.CharField(max_length=27)
+    aadhar_no = models.CharField(max_length=27)
+    mobile_no = models.CharField(max_length=17)
+    admission_date = models.CharField(max_length=17)
+    # school fees
+    total_school_fees = models.CharField(max_length=17)
+    total_school_fees_paid = models.CharField(max_length=17)
+    total_school_fees_remain = models.CharField(max_length=17)
+    date_of_school_fees_paid = models.CharField(max_length=17) 
+    # bus fees
+    total_bus_fees = models.CharField(max_length=17)
+    total_bus_fees_paid = models.CharField(max_length=17)
+    total_bus_fees_remain = models.CharField(max_length=17)
+    date_of_bus_fees_paid = models.CharField(max_length=17) 
+    # other details
+    bonafide_taken = models.CharField(max_length=7)
+    note = models.TextField()

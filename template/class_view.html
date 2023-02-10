@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+<!-- css for class_view -->
+{% block head %}
+<style>
+  .body {
+    background-color: #7fff00;
+  }
+
+  .view {
+    padding-left: 4%;
+  }
+
+  .index-font {
+    font-family: 'Dongle', sans-serif;
+  }
+
+  .title-centre {
+    display: flex;
+  }
+
+  .title-centre-button {
+    position: relative;
+    left: 44%
+  }
+</style>
+{% endblock head %}
+
+{% block div %}
+<form class="d-flex" method="POST" action="/class_view/{{std}}">
+  {% csrf_token %}
+  <input class="form-control me-2 fs-4" type="search" placeholder="Enter Name" aria-label="Search" name="stu_name">
+  <button class="btn btn-outline-success fs-4" type="submit">Search</button>
+</form>
+{% endblock div %}
+
+
+<!-- body for class_view -->
+{% block body %}
+
+<div class="container px-4 py-5 title-centre" id="hanging-icons">
+  <h2 class="pb-2 border-bottom fs-1 index-font">{{std}} Data Base</h2>
+  <button type="button" class="btn btn-light title-centre-button"><a href="/admi_form/{{std}}">Add Student<svg
+        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus"
+        viewBox="0 0 16 16">
+        <path
+          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+      </svg></a></button>
+
+</div>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <!-- loop form here -->
+      {% for i in class_data %}
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="col d-flex align-items-start">
+              <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              </div>
+              <div>
+                <h2 class="fs-2 index-font">{{i.name}}</h2>
+                <p>
+                <pre class="index-font fs-4">Register No  : {{i.register_no}}
+Roll No        :  {{i.rollno}}</pre>
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group view">
+                <a href="/student_profile/{{i.std}}/{{i.rollno}}"><button type="button"
+                    class="btn btn-sm btn-outline-secondary">View</button></a>
+                <!-- for edit button for direct data of the student -->
+                <!-- <a href="/student_profile/{{i.std}}/{{i.rollno}}"><button type="button"
+                    class="btn btn-sm btn-outline-secondary">Edit</button></a> -->
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <!-- end here -->
+    </div>
+  </div>
+</div>
+
+
+{% endblock body %}

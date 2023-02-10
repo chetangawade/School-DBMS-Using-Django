@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+
+<!-- css for class_view -->
+{% block head %}
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<style>
+    .view {
+        padding-left: 4%;
+    }
+
+    .index-font {
+        font-family: 'Dongle', sans-serif;
+    }
+
+    .data-1 {
+        padding-left: 16%;
+    }
+</style>
+{% endblock head %}
+
+<!-- body for class_view -->
+{% block body %}
+<!-- student info -->
+<div class="flex flex-col text-center w-full ">
+    <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900 ">{{student_data.name}}</h1>
+</div>
+<div class="container px-4 py-4 " id="hanging-icons">
+    <h2 class="pb-2 fs-1 index-font data-1">Student Details</h2>
+</div>
+<section class="text-gray-600 body-font">
+    <div class="container px-1 py-1 mx-auto">
+        <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+            <table class="table-auto w-full text-left whitespace-no-wrap">
+                <thead>
+                    <tr>
+                        <th
+                            class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200 rounded-tl rounded-bl">
+                            Details</th>
+                        <th
+                            class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200 rounded-tl rounded-bl">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="px-4 py-3 text-lg text-gray-900">Student Name</td>
+                        <td class="px-4 py-3">{{student_data.name}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Father Name</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.father_name}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Mother Name</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.mother_name}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Birth Date</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.birth_date}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Birth Place</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.birth_place}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Standard</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.std}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Register</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.register_no}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">UDISE No</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.udise_no}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Master No</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.master_no}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Roll No</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.rollno}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Aadhar No</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.aadhar_no}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Mobile No</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.mobile_no}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Admission Date</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.admission_date}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- fees -->
+<div class="container px-4 py-4 " id="hanging-icons">
+    <h2 class="pb-2 fs-1 index-font data-1">Fees Details</h2>
+</div>
+<section class="text-gray-600 body-font">
+    <div class="container px-1 py-1 mx-auto">
+        <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+            <table class="table-auto w-full text-left whitespace-no-wrap">
+                <thead>
+                    <tr>
+                        <th
+                            class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200 rounded-tl rounded-bl">
+                            Details</th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200">
+                            Total Fees</th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200">
+                            Total Fees Paid</th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200">
+                            Date of Fees Paid</th>
+                        <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200">
+                            Fees Remain</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="px-4 py-3 text-lg text-gray-900">School Fees</td>
+                        <td class="px-4 py-3">{{student_data.total_school_fees}}</td>
+                        <td class="px-4 py-3">{{student_data.total_school_fees_paid}}</td>
+                        <td class="px-4 py-3">{{student_data.date_of_school_fees_paid}}</td>
+                        <td class="px-4 py-3 text-lg text-gray-900">{{student_data.total_school_fees_remain}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Bus Fees</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.total_bus_fees}}</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.total_bus_fees_paid}}</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.date_of_bus_fees_paid}}</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">{{student_data.total_bus_fees_remain}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 "></td>
+                        <td class="border-t-2 border-gray-200 "></td>
+                        <td class="border-t-2 border-gray-200 "></td>
+                        <td class="border-t-2 border-gray-200 "></td>
+                        <td class="border-t-2 border-gray-200  text-lg text-gray-900"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- other details -->
+
+<div class="container px-4 py-4 " id="hanging-icons">
+    <h2 class="pb-2 fs-1 index-font data-1">Student Details</h2>
+</div>
+<section class="text-gray-600 body-font">
+    <div class="container px-1 py-1 mx-auto">
+        <div class="lg:w-2/3 w-full mx-auto overflow-auto">
+            <table class="table-auto w-full text-left whitespace-no-wrap">
+                <thead>
+                    <tr>
+                        <th
+                            class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200 rounded-tl rounded-bl">
+                            Details</th>
+                        <th
+                            class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-200 rounded-tl rounded-bl">
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="px-4 py-3 text-lg text-gray-900">No of Bonafide</td>
+                        <td class="px-4 py-3">{{student_data.bonafide_taken}}</td>
+                    </tr>
+                    <tr>
+                        <td class="border-t-2 border-gray-200 px-4 py-3 text-lg text-gray-900">Note</td>
+                        <td class="border-t-2 border-gray-200 px-4 py-3">{{student_data.note}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto px-4 py-4 ">
+    <button
+        class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded "><a
+            href="class_view">Back</a></button>
+</div> -->
+{% endblock body %}

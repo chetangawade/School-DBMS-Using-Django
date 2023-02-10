@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+<!-- css for index.html -->
+{% block head %}
+<style>
+  .view {
+    padding-left: 4%;
+  }
+
+  .index-font {
+    font-family: 'Dongle', sans-serif;
+  }
+  hr{
+    visibility: hidden;
+  }
+</style>
+{% endblock head %}
+
+
+<!-- body the index.html -->
+{% block body %}
+<div class="album bg-light pad">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <!-- loop form here -->
+      {% for i in iterator %}
+      {% if i == -2%}
+      <div class="container px-4 py-5 title-centre" id="hanging-icons">
+        <h2 class="pb-2 border-bottom fs-1 index-font">Kinder Garden Data Base</h2>
+      </div>
+      <hr>
+      <hr>
+      {% elif i == 1%}
+      <div class="container px-4 py-5 title-centre" id="hanging-icons">
+        <h2 class="pb-2 border-bottom fs-1 index-font">High School Data Base</h2>
+      </div>
+      <hr>
+      <hr>
+      {% elif i == 11 %}
+      <div class="container px-4 py-5 title-centre" id="hanging-icons">
+        <h2 class="pb-2 border-bottom fs-1 index-font">Junior College Data Base</h2>
+      </div>
+      <hr>
+      <hr>
+      {% endif %}
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="col d-flex align-items-start">
+              <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+              </div>
+              <div>
+                {% if i == -2 %}
+                <h2 class="fs-2 index-font">NRS</h2>
+                {% elif i == -1 %}
+                <h2 class="fs-2 index-font">UKG</h2>
+                {% elif i == 0 %}
+                <h2 class="fs-2 index-font">LKG</h2>
+                {% elif i == 1 %}
+                <h2 class="fs-2 index-font">{{i}}st STD </h2>
+                {% elif i == 2 %}
+                <h2 class="fs-2 index-font">{{i}}nd STD </h2>
+                {% elif i == 3 %}
+                <h2 class="fs-2 index-font">{{i}}rd STD</h2>
+                {% else %}
+                <h2 class="fs-2 index-font">{{i}}th STD</h2>
+                {% endif %}
+                <p>
+
+                <pre class="index-font fs-4">Number of total Students : ---
+Class Teacher Name : ---</pre>
+                </p>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group view">
+                {% if i == -2 %}
+                <a href="class_view/Nrs"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == -1 %}
+                <a href="class_view/Ukg"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 0 %}
+                <a href="class_view/Lkg"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 1 %}
+                <a href="class_view/1"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 2 %}
+                <a href="class_view/2"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 3 %}
+                <a href="class_view/3"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 4 %}
+                <a href="class_view/4"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 5 %}
+                <a href="class_view/5"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 6 %}
+                <a href="class_view/6"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 7 %}
+                <a href="class_view/7"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 8 %}
+                <a href="class_view/8"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 9 %}
+                <a href="class_view/9"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 10 %}
+                <a href="class_view/10"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% elif i == 11 %}
+                <a href="class_view/11"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% else %}
+                <a href="class_view/12"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                {% endif %}
+              </div>
+              <small class="text-muted">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% if i == 10  %}
+      <hr>
+      <hr>
+      {% endif %}
+      {% endfor %}
+      <!-- end here -->
+    </div>
+  </div>
+</div>
+<hr>
+
+{% endblock body%}
